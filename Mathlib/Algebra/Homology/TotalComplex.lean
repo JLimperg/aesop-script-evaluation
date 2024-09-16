@@ -372,6 +372,8 @@ lemma d₂_mapMap (i₁ : I₁) (i₂ : I₂) (i₁₂ : I₁₂) :
 
 -- Divergence between core subst and Aesop subst.
 set_option aesop.check.script false in
+set_option aesop.check.script.steps false in
+set_option aesop.dev.generateScript false in
 @[reassoc]
 lemma mapMap_D₁ (i₁₂ i₁₂' : I₁₂) :
     GradedObject.mapMap (toGradedObjectMap φ) _ i₁₂ ≫ L.D₁ c₁₂ i₁₂ i₁₂' =
@@ -380,6 +382,8 @@ lemma mapMap_D₁ (i₁₂ i₁₂' : I₁₂) :
 
 -- Divergence between core subst and Aesop subst.
 set_option aesop.check.script false in
+set_option aesop.check.script.steps false in
+set_option aesop.dev.generateScript false in
 @[reassoc]
 lemma mapMap_D₂ (i₁₂ i₁₂' : I₁₂) :
     GradedObject.mapMap (toGradedObjectMap φ) _ i₁₂ ≫ L.D₂ c₁₂ i₁₂ i₁₂' =

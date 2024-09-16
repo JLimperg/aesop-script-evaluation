@@ -97,7 +97,10 @@ attribute[aesop safe -50 (rule_sets := [Restrict])] Aesop.BuiltinRules.assumptio
 
 example {X} [CompleteLattice X] (v : Nat → X) (w x y z : X) (e : v 0 = v 1) (_ : v 1 = v 2)
     (h₀ : v 1 ≤ x) (_ : x ≤ z ⊓ w) (h₂ : x ≤ y ⊓ z) : v 0 ≤ y := by
-  set_option aesop.check.script false in -- unknown issue
+  -- unknown issue
+  set_option aesop.check.script false in
+  set_option aesop.check.script.steps false in
+  set_option aesop.dev.generateScript false in
   restrict_tac
 
 /-- The restriction of a section along an inclusion of open sets.

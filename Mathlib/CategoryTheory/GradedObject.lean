@@ -416,6 +416,8 @@ variable (X)
 
 -- mismatch between Aesop subst and tactic subst
 set_option aesop.check.script false in
+set_option aesop.check.script.steps false in
+set_option aesop.dev.generateScript false in
 @[simp]
 lemma mapMap_id : mapMap (𝟙 X) p = 𝟙 _ := by aesop_cat
 
@@ -423,11 +425,15 @@ variable {X Z}
 
 -- mismatch between Aesop subst and tactic subst
 set_option aesop.check.script false in
+set_option aesop.check.script.steps false in
+set_option aesop.dev.generateScript false in
 @[simp, reassoc]
 lemma mapMap_comp [Z.HasMap p] : mapMap (φ ≫ ψ) p = mapMap φ p ≫ mapMap ψ p := by aesop_cat
 
 -- mismatch between Aesop subst and tactic subst
 set_option aesop.check.script false in
+set_option aesop.check.script.steps false in
+set_option aesop.dev.generateScript false in
 /-- The isomorphism of `J`-graded objects `X.mapObj p ≅ Y.mapObj p` induced by an
 isomorphism `X ≅ Y` of graded objects and a map `p : I → J`. -/
 @[simps]
